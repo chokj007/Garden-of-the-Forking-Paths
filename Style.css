@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
 :root{
     --page-spacing:30px; 
-    --paragprah: 2em; 
+    --paragprah: 1em; 
     --color: white; 
     --margin: 1em;  
-    --base:20px
+    --base:5vh
   } 
 
 /* General */
@@ -14,11 +15,19 @@ h1{
   font-family: 'Space Mono', monospace; 
 }
 
+h2{ 
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: var(--paragprah);
+}
+
 /* Classes and Id's */
 
 .centered{
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 15vw;
+  text-align: center;
   padding: calc(var(--margin)/2);
 }
 
@@ -32,6 +41,7 @@ h1{
   background-color: #c00505;
   border-radius: 50vh;
   position: absolute;
+  opacity: 0.9;
 }
 
 .circle:nth-child(1) {
@@ -42,28 +52,83 @@ h1{
 }
 
 .circle:nth-child(2) {
-  width: 8vw;
-  height: 8vw;
-  top: 35vw;
-  left: 70vw;
+  width: 3vw;
+  height: 3vw;
+  top: 33vw;
+  left: 66vw;
 }
 
 .circle:nth-child(3) {
   width: 6vw;
   height: 6vw;
   top: 50vw;
-  left: 75vw;
+  left: 85vw;
 }
 
 .circle:nth-child(4) {
   width: 4vw;
   height: 4vw;
   top: 67vw;
-  left: 57vw;
+  left: 77vw;
+}
+
+.circle:nth-child(5) {
+  width: 6vw;
+  height: 6vw;
+  top: 70vw;
+  left: 5vw;
+}
+
+.circle:nth-child(6) {
+  width: 8vw;
+  height: 8vw;
+  top: 20vw;
+  left: 30vw;
+}
+.circle:nth-child(7) {
+  width: 7vw;
+  height: 7vw;
+  top: 50vw;
+  left: 60vw;
+}
+
+.circle:nth-child(8) {
+  width: 4vw;
+  height: 4vw;
+  top: 20vw;
+  left: 7vw;
 }
 
 .circle:hover {
   transform: scale(1.5);
-  opacity: 0.8;
+  opacity: 0.7;
+  background-color: #680000;
+}
+
+.bkg1{ 
+  background-color: #000;
+}
+
+.page1{
+  color:var(--color); 
+  display: block; 
+  margin-top: calc(var(--base)*3);
+  padding: calc(var(--base)*2);
+}
+
+/* Media Queries */
+
+@media (max-width:768px) {
+  :root{
+     --maxwidth: 60ch;
+     --margin:1em;
+} 
+}
+
+@media (min-width:768px) {
+
+  h2{
+    max-width: calc(var(--maxwidth)/2);
+  }
 }
 
