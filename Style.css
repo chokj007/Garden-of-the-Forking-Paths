@@ -3,10 +3,11 @@
 
 :root{
     --page-spacing:30px; 
-    --paragprah: 1em; 
+    --paragprah: 2em; 
     --color: white; 
     --margin: 1em;  
-    --base:5vh
+    --base:5vh;
+    --maxwidth: 120ch;
   } 
 
 /* General */
@@ -20,22 +21,31 @@ h2{
   font-size: var(--paragprah);
 }
 
-/* Classes and Id's */
-
-.centered{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 15vw;
-  text-align: center;
-  padding: calc(var(--margin)/2);
+p{
+  font-family: 'Space Mono', monospace; 
+  font-size: calc(var(--paragprah)/1.5);  
+  color: var(--color);
 }
+
+/* Classes and Id's */
 
 #blur {
   text-shadow: 0 0 2px #000;
   filter: blur(3px);
   -webkit-filter: blur(3px);
 }
+
+.centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11.5vw;
+  text-align: center;
+  padding: calc(var(--margin)/2);
+  margin: 0 auto;
+}
+
+/* Circles */
 
 .circle {
   background-color: #c00505;
@@ -44,65 +54,164 @@ h2{
   opacity: 0.9;
 }
 
-.circle:nth-child(1) {
+.circle:nth-child(3n) {
+  width: 3vw;
+  height: 3vw;
+}
+
+.circle:nth-child(3n-2) {
   width: 5vw;
   height: 5vw;
-  top: 53vw;
+}
+
+.circle:nth-child(3n-1) {
+  width: 8vw;
+  height: 8vw;
+}
+
+/* Positioning */
+
+.circle:nth-child(1) {
+  top: 25vw;
   left: 27vw;
 }
 
 .circle:nth-child(2) {
-  width: 3vw;
-  height: 3vw;
-  top: 33vw;
-  left: 66vw;
+  top: 49vw;
+  left: 69vw;
 }
 
 .circle:nth-child(3) {
-  width: 6vw;
-  height: 6vw;
-  top: 50vw;
+  top: 40vw;
   left: 85vw;
 }
 
 .circle:nth-child(4) {
-  width: 4vw;
-  height: 4vw;
-  top: 67vw;
-  left: 77vw;
+  top: 7vw;
+  left: 87vw;
 }
 
 .circle:nth-child(5) {
-  width: 6vw;
-  height: 6vw;
-  top: 70vw;
-  left: 5vw;
+  top: 40vw;
+  left: 90vw;
 }
 
 .circle:nth-child(6) {
-  width: 8vw;
-  height: 8vw;
   top: 20vw;
   left: 30vw;
 }
 .circle:nth-child(7) {
-  width: 7vw;
-  height: 7vw;
-  top: 50vw;
-  left: 60vw;
+  top: 40vw;
+  left: 50vw;
 }
 
 .circle:nth-child(8) {
-  width: 4vw;
-  height: 4vw;
-  top: 20vw;
-  left: 7vw;
+  top: 39vw;
+  left: 17vw;
 }
+
+.circle:nth-child(9) {
+  top: 9vw;
+  left: 50vw;
+}
+
+.circle:nth-child(10) {
+  top: 30vw;
+  left: 70vw;
+}
+
+.circle:nth-child(11) {
+  top: 10vw; 
+  left: 3vw;
+}
+
+.circle:nth-child(12) { 
+  top: 34vw; 
+  left: 4vw;
+}
+
+.circle:nth-child(13) { 
+  top: 50vw; 
+  left: 9vw;
+}
+
+.circle:nth-child(14) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+.circle:nth-child(15) { 
+  top: 45vw; 
+  left: 30vw;
+}
+
+.circle:nth-child(16) { 
+  top: 5vw; 
+  left: 60vw;
+}
+
+/* Left */
+/* .circle:nth-child(17) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+
+.circle:nth-child(18) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+
+.circle:nth-child(19) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+
+.circle:nth-child(20) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+
+.circle:nth-child(21) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+
+.circle:nth-child(22) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+.circle:nth-child(23) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+}
+
+.circle:nth-child(24) { 
+  width:3vw;
+  height:3vw;
+  top: 25vw; 
+  left: 60vw;
+} */
 
 .circle:hover {
   transform: scale(1.5);
   opacity: 0.7;
   background-color: #680000;
+  transition: 0.2s ease;
 }
 
 .bkg1{ 
@@ -111,24 +220,39 @@ h2{
 
 .page1{
   color:var(--color); 
-  display: block; 
   margin-top: calc(var(--base)*3);
   padding: calc(var(--base)*2);
+  max-width: var(--maxwidth);
+  
+}
+
+.page1a{
+  display: block;
+  color:var(--color); 
+  padding: calc(var(--base)*2);
+  opacity: 0.2;
+  margin: auto;
+  position: relative;
+  max-width: var(--maxwidth);
+}
+
+.Overlay{
+  display: block;
+  position: absolute;
+  padding: calc(var(--base)*2);
+  max-width: 60ch;
+  top: 0;
+  margin-left: 28vw
 }
 
 /* Media Queries */
 
 @media (max-width:768px) {
   :root{
-     --maxwidth: 60ch;
      --margin:1em;
 } 
 }
 
 @media (min-width:768px) {
-
-  h2{
-    max-width: calc(var(--maxwidth)/2);
-  }
 }
 
