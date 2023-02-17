@@ -24,7 +24,6 @@ h2{
 p{
   font-family: 'Space Mono', monospace; 
   font-size: calc(var(--paragprah)/1.5);  
-  color: var(--color);
 }
 
 /* Classes and Id's */
@@ -151,15 +150,15 @@ p{
   left: 60vw;
 }
 
-/* Left */
-/* .circle:nth-child(17) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
+
+.circle:nth-child(17) { 
+  top: 22vw; 
+  left: 83vw;
 }
 
-.circle:nth-child(18) { 
+/* Left */
+
+/* .circle:nth-child(18) { 
   width:3vw;
   height:3vw;
   top: 25vw; 
@@ -219,10 +218,11 @@ p{
 }
 
 .page1{
-  color:var(--color); 
-  margin-top: calc(var(--base)*3);
-  padding: calc(var(--base)*2);
-  max-width: var(--maxwidth);
+color:var(--color); 
+display: block;
+margin: auto;
+padding: calc(var(--base)*2);
+max-width: var(--maxwidth);
   
 }
 
@@ -239,20 +239,128 @@ p{
 .Overlay{
   display: block;
   position: absolute;
-  padding: calc(var(--base)*2);
   max-width: 60ch;
   top: 0;
-  margin-left: 28vw
+  margin-left: 28vw;
+  padding: calc(var(--base)*2); 
+  color: var(--color);
+}
+
+.rightside{ 
+  display:inline;
+  float: right; 
+  margin-top: 3vw;
+  color: var(--color);
+  text-align: right;
+}
+
+.leftside {
+  display: block;
+  float: left;
+  margin-right:auto; 
+  margin-left: auto
+}
+
+.leftside.smaller {
+ margin-top: auto;
+ margin-bottom: auto;
+}
+
+.warpedtext { 
+  display: block;
+  margin: 3vw auto;
+}
+
+.Red { 
+display: block;
+margin: 20vw;
+margin-bottom: 0;
+color: #c00505;
+top:0; 
+padding: calc(var(--base)*2); 
+max-width: 50ch
+}
+
+.Darkred { 
+color:#3c0000;
+margin: 8vw;
+margin-bottom: 0;
+font-size: calc(var(--paragprah)*1.5);
 }
 
 /* Media Queries */
 
 @media (max-width:768px) {
+ 
   :root{
      --margin:1em;
 } 
+
+/* Page 1 */
+
+/* 1.1 */
+
+.page1{
+color:var(--color); 
+display: block;
+padding: calc(var(--base)*2);
+max-width: 50ch;
+font-size: 2.5vw;
 }
 
+/* 1.2 */
+
+.page1a{
+  display: block;
+  color:var(--color); 
+  padding: calc(var(--base)*2);
+  opacity: 0.2;
+  margin: auto;
+  position: relative;
+  max-width: 65ch;
+  font-size: 2vw;
+}
+
+.Overlay{
+  display: block;
+  position: absolute;
+  max-width: 35ch;
+  top: 0;
+  margin-left: 7vw;
+  font-size: 2vw;
+  padding: calc(var(--base)*2); 
+  color: var(--color);
+  text-align: center;
+}
+
+/* Page 2 */
+
+/* 2.1 */
+
+.rightside{ 
+  display:none
+}
+
+.Smallscreen {
+  color: var(--color);
+  padding: var(--base);
+  text-align: center
+}
+
+
+}
+
+
 @media (min-width:768px) {
+ 
+  /* Page 2  */
+
+  /* 2.1 */
+
+  .Smallscreen {
+    display: none; 
+ }
+
+
 }
 
