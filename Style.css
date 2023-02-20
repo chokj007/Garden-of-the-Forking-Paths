@@ -257,14 +257,21 @@ max-width: var(--maxwidth);
 .leftside {
   display: block;
   float: left;
-  margin-right:auto; 
-  margin-left: auto
+  margin: calc(var(--base)*5) 0;
 }
 
 .leftside.smaller {
  margin-top: auto;
  margin-bottom: auto;
 }
+
+.Lft2 {
+  float: left;
+  margin: calc(var(--base)*5) 0;
+  opacity: 0.1;
+  color: var(--color);
+ }
+
 
 .warpedtext { 
   display: block;
@@ -274,6 +281,7 @@ max-width: var(--maxwidth);
 .Red { 
 display: block;
 margin: 20vw;
+margin-left: var(--base);
 margin-bottom: 0;
 color: #c00505;
 top:0; 
@@ -281,20 +289,70 @@ padding: calc(var(--base)*2);
 max-width: 50ch
 }
 
+
+.Red2{
+color: #c00505;
+padding: calc(var(--base)*7);
+padding-left: 30vw;
+opacity: 0.2;
+}
+
 .Darkred { 
 color:#3c0000;
 margin: 8vw;
-margin-bottom: 0;
+margin-bottom: 0vw;
 font-size: calc(var(--paragprah)*1.5);
 }
 
+.farup{ 
+  display: block;
+  margin-top: 0;
+  top:0;
+  display: block;
+  position: absolute;
+  max-width: 40ch;
+ font-size: var(--paragprah); 
+ margin-left: 20vw;
+}
+
+.Bkg4{
+  background-color: #c00505;
+}
+
+.rules {
+  font-size: calc(var(--base)/2.5);
+  display: block; 
+  padding: 5vw 38vw;
+  opacity:0.5
+}
+
+
 /* Media Queries */
 
-@media (max-width:768px) {
- 
-  :root{
-     --margin:1em;
-} 
+
+
+@media (max-width:390px)  { 
+  
+  /* Specifically for phones */
+
+  /* Page 3.1 */
+
+  .leftside{
+    display: none;
+  }
+
+  .Red {
+   padding-top: calc(var(--base)/2);
+   text-align: center;
+   font-size: 1em;
+  }
+}
+
+
+
+@media (max-width:767px) {
+
+  /* Phone/smaller */
 
 /* Page 1 */
 
@@ -347,11 +405,79 @@ font-size: 2.5vw;
   text-align: center
 }
 
+/* Page 3 */
 
+/* 3.1 */
+
+.bkg3{
+  background-color: black;
+  color:var(--color)
+  }
+
+  .Red { 
+    margin: 0 auto;
+    padding-top: calc(var(--base)*21);
+    }
+    
+    .Darkred {
+      margin: 0 auto;
+      text-align: center;
+      font-size: var(--paragprah);
+    }
+
+.Overlay {
+  display: none;
+}
+
+/* 3.2 */
+
+.Lft2 {
+  display: none;
+}
+
+.Red2{
+margin:auto;
+font-size: calc(var(--paragprah)/2);
+padding: auto
+}
+
+.farup{ 
+  font-size: calc(var(--paragprah)*1.2);
+  text-align: center; 
+  margin: var(--base);
+  color:#3c0000; 
+}
+
+}
+
+@media (width: 763px) {
+  /* Only for Page 4 */
+
+.lines { 
+  position: absolute;
+  width: 19.8vw;
+  left: 67.55vw;
+  top: 79vw;
+  
+  border: 1.8px solid #3c0000; ;
+  transform: rotate(90deg);
+}
+
+.line2{
+  position: absolute;
+  width: 19.8vw;
+  left: 65.75vw;
+  top: 79vw;
+  
+  border: 1.8px solid #3c0000;
+  transform: rotate(90deg);
+}
 }
 
 
 @media (min-width:768px) {
+
+  /* Tablet */
  
   /* Page 2  */
 
@@ -361,6 +487,87 @@ font-size: 2.5vw;
     display: none; 
  }
 
+/* Page 3 */
+
+/* 3.1 */
+
+ .bkg3{
+  background-color: black;
+  color:var(--color)
+  }
+  
+  .leftside.smaller {
+    margin-top: calc(var(--base)*6.5);
+  }
+  
+  .Red { 
+  margin: 0 auto;
+  padding-top: calc(var(--base)*21);
+  }
+  
+  .Darkred {
+    margin: auto;
+    text-align: center;
+  }
+
+  .Overlay {
+    color:#c00505;
+    opacity: 0.5;
+    margin:var(--base) 0;
+    margin-top: calc(var(--base)*4);
+  }
+
+  /* 3.2 */
+
+  .farup{
+    font-size: calc(var(--paragprah)/1.2);
+    margin: 0 calc(var(--base)*5);
+    text-align: center;
+    color:#3c0000
+  }
+
+
+}
+
+
+
+
+
+@media (min-width:1024px){
+
+  /* Laptop or larger */
+
+   /* Page 2  */
+
+  /* 2.1 */
+
+  .Smallscreen {
+    display: none; 
+ }
+
+ /* Page 3 */
+
+ /* 3.1 */
+.Overlay {
+  display: none;
+}
+
+.Darkred{
+  padding-bottom: 0;
+}
+
+/* 3.2 */
+
+.farup{ 
+  display: block;
+  margin-top: 0;
+  top:0;
+  display: block;
+  position: absolute;
+  max-width: 40ch;
+ font-size: var(--paragprah); 
+ margin-left: 20vw
+}
 
 }
 
