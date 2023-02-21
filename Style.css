@@ -134,83 +134,6 @@ img{
   left: 4vw;
 }
 
-.circle:nth-child(13) { 
-  top: 50vw; 
-  left: 9vw;
-}
-
-.circle:nth-child(14) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-}
-.circle:nth-child(15) { 
-  top: 45vw; 
-  left: 30vw;
-}
-
-.circle:nth-child(16) { 
-  top: 5vw; 
-  left: 60vw;
-}
-
-
-.circle:nth-child(17) { 
-  top: 22vw; 
-  left: 83vw;
-}
-
-/* Left */
-
-/* .circle:nth-child(18) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-}
-
-.circle:nth-child(19) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-}
-
-.circle:nth-child(20) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-}
-
-.circle:nth-child(21) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-}
-
-.circle:nth-child(22) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-}
-.circle:nth-child(23) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-}
-
-.circle:nth-child(24) { 
-  width:3vw;
-  height:3vw;
-  top: 25vw; 
-  left: 60vw;
-} */
-
 .circle:hover {
   transform: scale(1.5);
   opacity: 0.7;
@@ -222,189 +145,102 @@ img{
   background-color: #000;
 }
 
-.page1{
-color:var(--color); 
-display: block;
-margin-top: 0;
-margin: auto;
-padding: var(--base);
-max-width: var(--maxwidth);
-font-size: calc(var(--base)/4);
-transition: opacity 0.2s ease-in-out;
+.Darkred.two {
+ position: absolute;
 }
 
-.image-container {
-  display: inline;
-  margin:var(--base)
-}
-.image-container:hover .page1 {
-  opacity: 0.2; /* change the opacity on hover */
-}
-
-.Overlay {
-  display: none; /* make it invisible by default */
+.Mainimage.five{ 
   position: absolute;
-  max-width: 60ch;
-  top: 0;
-  margin-left: 28vw;
-  padding: calc(var(--base)*2); 
-  color: var(--color);
+  top: 40vw;
+  left: 80vw; 
 }
 
-.image-container:hover .Overlay{
-  display: block; /* show the text on hover */
-}
-.rightside{ 
-  display:inline;
-  float: right; 
-  margin-top: calc(var(--base)*3);
-  color: var(--color);
-  text-align: right;
-  transition: opacity 0.2s ease-in-out;
+.image-container:hover .centre{
+  display: block;
+  margin: 10vw; 
+  color:#c00505;
+  transition: 0.2s ease;
+  cursor:pointer
 }
 
-.image-container:hover .rightside{
-  display: none
+.image-container:hover .Mainimage.five {
+  opacity: 0.5;
+  transition: 0.2s ease;
+  cursor:pointer
 }
 
+.centre{
+ visibility: none;
+ display: none;
+}
 
-.leftside {
+.Mainimage.six{
+  position: absolute;
+  top: 90vw;
+  left: 45vw; 
+}
+
+.Mainimage.seven{
+  position: absolute;
+  top: 90vw;
+  left: 10vw; 
+}
+
+.Page6{
+  color:var(--color);
+  margin: var(--base);
+  position: absolute;
+ }
+
+ .Page6old{
+  color:var(--color);
+  margin: var(--base);
+  position: absolute;
+ }
+
+ .Page6.new{
   display: none;
-}
-
-.image-container:hover .leftside {
-display:block;
-float: left;
-margin: calc(var(--base)*2) 0;
-color: var(--color);
-transition: opacity 0.2s ease-in-out;
-
-}
-
-.lft.smaller {
-display:block;
-float: left;
-margin: (var(--base)) 0;
-color: black;
-transition: opacity 0.2s ease-in-out;
-}
-
-.image-container:hover .lft.smaller {
- opacity: 0.1 ;
-  }
-
-.Red { 
-display: block;
-/* margin: calc(var(--base)*5); */
-margin-left: calc(var(--base)*9);
-margin-bottom:0 ;
-color: #c00505;
-top:0; 
-padding: calc(var(--base)*2); 
-max-width: 50ch;
-transition: opacity 0.2s ease-in-out;
-}
-
-.image-container:hover .Red {
-  opacity: 0.1 ;
  }
 
-.farup{ 
-visibility: hidden;
+.one{
+  font-size: calc(var(--paragprah)/3.8) 
 }
 
-.image-container:hover .farup {
+.two{
+  font-size: calc(var(--paragprah)/3) ;
+}
+
+.three{
+  font-size: calc(var(--paragprah)/2.2) ;
+}
+
+.four{ 
+  font-size: calc(var(--paragprah)/2) ;
+}
+
+.five{
+  font-size: calc(var(--paragprah)/1.3) ;
+}
+
+.six{
+  font-size: calc(var(--paragprah)*1.2) ;
+}
+
+.up2{
+  color:var(--color);
   visibility: visible;
   display: block;
   margin-top: 0;
   top:0;
   position: absolute;
-  max-width: 40ch;
-  font-size: var(--paragprah); 
-  margin-left: 20vw;
-  transition: opacity 0.2s ease-in-out;
-
- }
-
-.warpedtext { 
-  display: block;
-  margin: 2vw 40vw;
-  width: 20vw
+ font-size: calc(var(--paragprah)/4); 
+ margin: 0 20vw;
+ opacity: 0.3
 }
 
-.Darkred { 
-color:#3c0000;
-margin: var(--base);
-margin-bottom: 0vw;
-font-size: calc(var(--paragprah)*1.5);
+.four.new{ 
+  color:#c00505
 }
-
-.Bkg4{
-  background-color: #c00505;
-}
-
-.rules {
-  font-size: calc(var(--base)/2.5);
-  display: block; 
-  padding: 20vw 37.5vw;
-  padding-bottom: 0;
-  opacity:0.5;
-  color: var(--color)
-}
-
-.rules.two{
-  color:#000;
-  padding: 0 34vw;
-}
-
-.Mainimage.two{
-  margin: -10vw 40vw; 
-} 
-
-.Mainimage.three{
-  margin: 0 80vw
-}
-
-.farup2 { 
-  display: block;
-  top:0;
-  position: absolute;
-  max-width: 40ch;
- font-size: var(--paragprah); 
- margin: 0 20vw
-}
-
-.Mainimage.four { 
-  margin: 20vw 80vw;
-  margin-bottom: 0
-}
-
-.middle { 
-  display:none
-}
-
-.image-container:hover .middle{ 
-  visibility: visible;
-  display: block;
-  position: absolute;
-  max-width: 60ch;
-  font-size: var(--paragprah); 
-  margin: 20vw;
-  top: var(--base);
-  margin-top: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.image-container:hover .farup2 {
-   opacity: 0.2;
-}
-
-.image-container:hover .rules { 
-display: none;
-}
-
-
-
 
 /* Media Queries */
 
@@ -501,13 +337,8 @@ display: none;
 
     /* Page 4 */
 
-    .farup2{
-       margin: 0 10vw;
-       margin-bottom: 0;
-      }
-
       .Mainimage.four { 
-        margin: 100vw 70vw;
+        margin: 60vw 130vw;
         margin-bottom: 0;
       }
 
@@ -515,17 +346,50 @@ display: none;
         display:none
       }
 
-      .middle {
-        visibility: visible;
-        position: absolute;
-        display: block;
-        font-size: calc(var(--paragprah)/2); 
-        margin: 20vw;
-        top: var(--base);
-        margin-top: 0;
+      .Darkred.two {  
+          visibility: visible;
+          display: block;
+          top: 0;
+          position: absolute;
+          max-width: 60ch;
+         font-size: calc(var(--paragprah)/1.7); 
+         margin: 20vw 20vw
+
       }
 
-   
+      /* Page 5 */
+  .centre{ 
+    display:block; 
+    margin: var(--base); 
+    font-size: calc(var(--paragprah)/3);
+  }
+
+  .image-container:hover {
+    display: none;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  /* .RG{
+    margin-left:2vw; 
+    text-align: right;
+    padding:0
+  } */
+
+  .Mainimage.five{ 
+    top: 80vw; 
+    opacity: 0.3;
+  }
+
+  /* Page 6 */
+
+  .Mainimage.six{
+    position: absolute;
+    top: 130vw;
+    left: 45vw; 
+  }
+
+  
 
 }
 
@@ -582,31 +446,48 @@ display: none;
 
   /* Page 4 */
 
-  /* .farup2{
+  .farup2{
     display: none
-  } */
-
-  /* .middle { 
-    visibility: visible;
-    display: block;
-    position: absolute;
-    max-width: 60ch;
-    font-size: calc(var(--paragprah)/1.5); 
-    margin: 20vw;
-    top: var(--base);
-    transition: opacity 0.2s ease-in-out;
-  }
+  } 
 
   .Mainimage.four { 
-    margin: 75vw 75vw;
-    margin-bottom: 0
-  } */
+    /* margin: 75vw 80vw;
+    margin-bottom: 0 */
+    margin-left: 80vw; 
+    margin-top: 30vw
+  }
+
+  .Darkred.two {  
+    top:0;
+    visibility: visible;
+    display: block;
+    margin-bottom: 0;
+    margin: 15vw
+
+}
+
+.centre{ 
+  display:block; 
+  margin: calc(var(--base)*3);
+}
+
+.Mainimage.five { 
+  opacity: 0.5;
+}
+
+/* Page 5 */
+
+/* .RG {
+ position: absolute;
+ text-align: right;
+ pointer-events: none;
+} */
 
 }
 
 @media (hover: none) {
 
-  /* Disable hover */
+  Disable hover */
 
   .image-container:hover {
     display: inherit;
@@ -620,7 +501,154 @@ display: none;
 
   /* Laptop or larger */
 
- /* Page 3 */
+  /* Page 1 */
+  .page1{
+    color:var(--color); 
+    display: block;
+    margin-top: 0;
+    margin: auto;
+    padding: var(--base);
+    max-width: var(--maxwidth);
+    font-size: calc(var(--base)/4);
+    transition: opacity 0.2s ease-in-out;
+    }
+    
+    .image-container {
+      display: inline;
+      margin:var(--base)
+    }
+    .image-container:hover .page1 {
+      opacity: 0.2; /* change the opacity on hover */
+    }
+
+    
+    
+    /* Page 2 and 3 */
+
+    .Overlay {
+      display: none; /* make it invisible by default */
+      position: absolute;
+      max-width: 60ch;
+      top: 0;
+      margin-left: 28vw;
+      padding: calc(var(--base)*2); 
+      color: var(--color);
+    }
+    
+    .image-container:hover .Overlay{
+      display: block; /* show the text on hover */
+    }
+    .rightside{ 
+      display:inline;
+      float: right; 
+      margin-top: calc(var(--base)*3);
+      color: var(--color);
+      text-align: right;
+      transition: opacity 0.2s ease-in-out;
+    }
+    
+    .image-container:hover .rightside{
+      display: none
+    }
+    
+    
+    .leftside {
+      display: none;
+    }
+    
+    .image-container:hover .leftside {
+    display:block;
+    float: left;
+    margin: calc(var(--base)*2) 0;
+    color: var(--color);
+    transition: opacity 0.2s ease-in-out;
+    
+    }
+    
+    .lft.smaller {
+    display:block;
+    float: left;
+    margin: (var(--base)) 0;
+    color: black;
+    transition: opacity 0.2s ease-in-out;
+    }
+    
+    .image-container:hover .lft.smaller {
+     opacity: 0.1 ;
+      }
+    
+    .Red { 
+    display: block;
+    /* margin: calc(var(--base)*5); */
+    margin-left: calc(var(--base)*9);
+    margin-bottom:0 ;
+    color: #c00505;
+    top:0; 
+    padding: calc(var(--base)*2); 
+    max-width: 50ch;
+    transition: opacity 0.2s ease-in-out;
+    }
+    
+    .image-container:hover .Red {
+      opacity: 0.1 ;
+     }
+    
+    .farup{ 
+    visibility: hidden;
+    }
+    
+    .image-container:hover .farup {
+      visibility: visible;
+      display: block;
+      margin-top: 0;
+      top:0;
+      position: absolute;
+      max-width: 40ch;
+      font-size: var(--paragprah); 
+      margin-left: 20vw;
+      transition: opacity 0.2s ease-in-out;
+    
+     }
+    
+    .warpedtext { 
+      display: block;
+      margin: 2vw 40vw;
+      width: 20vw
+    }
+    
+    .Darkred { 
+    color:#3c0000;
+    margin: var(--base);
+    margin-bottom: 0vw;
+    font-size: calc(var(--paragprah)*1.5);
+    }
+    
+    .Bkg4{
+      background-color: #c00505;
+    }
+    
+    .rules {
+      font-size: calc(var(--base)/2.5);
+      display: block; 
+      padding: 20vw 37.5vw;
+      padding-bottom: 0;
+      opacity:0.5;
+      color: var(--color)
+    }
+    
+    .rules.two{
+      color:#000;
+      padding: 0 34vw;
+    }
+    
+    .Mainimage.two{
+      margin: -10vw 40vw; 
+    } 
+    
+    .Mainimage.three{
+      margin: 0 80vw
+    }
+
 
  .Smallscreen {
   display: none; 
@@ -631,6 +659,86 @@ display: none;
 }
 
 /* Page 4 */
+
+.Darkred.two {
+  font-size: calc(var(--paragprah)/1.5);
+}
+
+.farup2 { 
+  visibility: visible;
+  display: block;
+  margin-top: 0;
+  top:0;
+  position: absolute;
+  max-width: 40ch;
+ font-size: var(--paragprah); 
+ margin: 0 20vw;
+ transition: opacity 0.2s ease-in-out;
+}
+
+.Mainimage.four { 
+  margin: 20vw 76vw;
+  margin-bottom: 0
+}
+
+.image-container:hover .farup2 {
+   opacity: 0.2;
+}
+
+.image-container:hover .rules.four { 
+display: none;
+}
+
+  .image-container:hover .Darkred.two { 
+    font-size: calc(var(--paragprah)*3);
+    margin: 0 12vw
+    }
+
+.rules.four{
+  
+  margin: 0;
+  font-size: calc(var(--base)/2.5);
+  display: block;
+  padding: 0 37.5vw;
+  opacity:0.5;
+  color: var(--color)
+}
+
+
+/* Page 5 */ 
+
+/* .RG {
+  display:inline;
+      float: right; 
+      margin-left: 20vw;;
+      text-align: right;
+      transition: opacity 0.2s ease-in-out;
+      position: absolute;
+} */
+
+.centre {
+  display: none;
+}
+
+/* Page 6 */
+
+.image-container:hover .Page6.new {
+  display: block;
+  margin: 0 20vw;
+  top:0;
+  color: #c00505;
+}
+
+.image-container:hover .Page6old{
+  opacity: 0.1;
+}
+
+.image-container:hover .Mainimage.six{
+ opacity: 0.4;
+}
+
+
+
 
 }
 
