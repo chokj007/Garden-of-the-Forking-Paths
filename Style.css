@@ -26,6 +26,11 @@ p{
   font-size: calc(var(--paragprah)/1.5);  
 }
 
+img{
+  width: 15vw; 
+  /* padding-left: calc(var(--base)/2) */
+}
+
 /* Classes and Id's */
 
 #blur {
@@ -220,24 +225,24 @@ p{
 .page1{
 color:var(--color); 
 display: block;
+margin-top: 0;
 margin: auto;
-padding: calc(var(--base)*2);
+padding: var(--base);
 max-width: var(--maxwidth);
-  
+font-size: calc(var(--base)/4);
+transition: opacity 0.2s ease-in-out;
 }
 
-.page1a{
-  display: block;
-  color:var(--color); 
-  padding: calc(var(--base)*2);
-  opacity: 0.2;
-  margin: auto;
-  position: relative;
-  max-width: var(--maxwidth);
+.image-container {
+  display: inline;
+  margin:var(--base)
+}
+.image-container:hover .page1 {
+  opacity: 0.2; /* change the opacity on hover */
 }
 
-.Overlay{
-  display: block;
+.Overlay {
+  display: none; /* make it invisible by default */
   position: absolute;
   max-width: 60ch;
   top: 0;
@@ -246,73 +251,92 @@ max-width: var(--maxwidth);
   color: var(--color);
 }
 
+.image-container:hover .Overlay{
+  display: block; /* show the text on hover */
+}
 .rightside{ 
   display:inline;
   float: right; 
-  margin-top: 3vw;
+  margin-top: calc(var(--base)*3);
   color: var(--color);
   text-align: right;
+  transition: opacity 0.2s ease-in-out;
 }
+
+.image-container:hover .rightside{
+  display: none
+}
+
 
 .leftside {
-  display: block;
-  float: left;
-  margin: calc(var(--base)*5) 0;
+  display: none;
 }
 
-.leftside.smaller {
- margin-top: auto;
- margin-bottom: auto;
+.image-container:hover .leftside {
+display:block;
+float: left;
+margin: calc(var(--base)*2) 0;
+color: var(--color);
+transition: opacity 0.2s ease-in-out;
+
 }
 
-.Lft2 {
-  float: left;
-  margin: calc(var(--base)*5) 0;
-  opacity: 0.1;
-  color: var(--color);
- }
-
-
-.warpedtext { 
-  display: block;
-  margin: 3vw auto;
+.lft.smaller {
+display:block;
+float: left;
+margin: (var(--base)) 0;
+color: black;
+transition: opacity 0.2s ease-in-out;
 }
+
+.image-container:hover .lft.smaller {
+ opacity: 0.1 ;
+  }
 
 .Red { 
 display: block;
-margin: 20vw;
-margin-left: var(--base);
-margin-bottom: 0;
+/* margin: calc(var(--base)*5); */
+margin-left: calc(var(--base)*9);
+margin-bottom:0 ;
 color: #c00505;
 top:0; 
 padding: calc(var(--base)*2); 
-max-width: 50ch
+max-width: 50ch;
+transition: opacity 0.2s ease-in-out;
 }
 
+.image-container:hover .Red {
+  opacity: 0.1 ;
+ }
 
-.Red2{
-color: #c00505;
-padding: calc(var(--base)*7);
-padding-left: 30vw;
-opacity: 0.2;
+.farup{ 
+visibility: hidden;
+}
+
+.image-container:hover .farup {
+  visibility: visible;
+  display: block;
+  margin-top: 0;
+  top:0;
+  position: absolute;
+  max-width: 40ch;
+  font-size: var(--paragprah); 
+  margin-left: 20vw;
+  transition: opacity 0.2s ease-in-out;
+
+ }
+
+.warpedtext { 
+  display: block;
+  margin: 2vw 40vw;
+  width: 20vw
 }
 
 .Darkred { 
 color:#3c0000;
-margin: 8vw;
+margin: var(--base);
 margin-bottom: 0vw;
 font-size: calc(var(--paragprah)*1.5);
-}
-
-.farup{ 
-  display: block;
-  margin-top: 0;
-  top:0;
-  display: block;
-  position: absolute;
-  max-width: 40ch;
- font-size: var(--paragprah); 
- margin-left: 20vw;
 }
 
 .Bkg4{
@@ -322,9 +346,64 @@ font-size: calc(var(--paragprah)*1.5);
 .rules {
   font-size: calc(var(--base)/2.5);
   display: block; 
-  padding: 5vw 38vw;
-  opacity:0.5
+  padding: 20vw 37.5vw;
+  padding-bottom: 0;
+  opacity:0.5;
+  color: var(--color)
 }
+
+.rules.two{
+  color:#000;
+  padding: 0 34vw;
+}
+
+.Mainimage.two{
+  margin: -10vw 40vw; 
+} 
+
+.Mainimage.three{
+  margin: 0 80vw
+}
+
+.farup2 { 
+  display: block;
+  top:0;
+  position: absolute;
+  max-width: 40ch;
+ font-size: var(--paragprah); 
+ margin: 0 20vw
+}
+
+.Mainimage.four { 
+  margin: 20vw 80vw;
+  margin-bottom: 0
+}
+
+.middle { 
+  display:none
+}
+
+.image-container:hover .middle{ 
+  visibility: visible;
+  display: block;
+  position: absolute;
+  max-width: 60ch;
+  font-size: var(--paragprah); 
+  margin: 20vw;
+  top: var(--base);
+  margin-top: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.image-container:hover .farup2 {
+   opacity: 0.2;
+}
+
+.image-container:hover .rules { 
+display: none;
+}
+
+
 
 
 /* Media Queries */
@@ -334,8 +413,6 @@ font-size: calc(var(--paragprah)*1.5);
 @media (max-width:390px)  { 
   
   /* Specifically for phones */
-
-  /* Page 3.1 */
 
   .leftside{
     display: none;
@@ -350,29 +427,20 @@ font-size: calc(var(--paragprah)*1.5);
 
 
 
-@media (max-width:767px) {
+@media (max-width:767px){
 
   /* Phone/smaller */
 
 /* Page 1 */
 
-/* 1.1 */
-
-.page1{
-color:var(--color); 
-display: block;
-padding: calc(var(--base)*2);
-max-width: 50ch;
-font-size: 2.5vw;
+.Mainimage{
+  margin-top: 10vw; 
 }
 
-/* 1.2 */
-
-.page1a{
+.page1{
   display: block;
   color:var(--color); 
-  padding: calc(var(--base)*2);
-  opacity: 0.2;
+  /* padding: calc(var(--base)*2); */
   margin: auto;
   position: relative;
   max-width: 65ch;
@@ -380,155 +448,170 @@ font-size: 2.5vw;
 }
 
 .Overlay{
-  display: block;
-  position: absolute;
-  max-width: 35ch;
-  top: 0;
-  margin-left: 7vw;
-  font-size: 2vw;
-  padding: calc(var(--base)*2); 
-  color: var(--color);
-  text-align: center;
+  display: none;
 }
 
-/* Page 2 */
-
-/* 2.1 */
-
-.rightside{ 
+.rules{
   display:none
 }
 
-.Smallscreen {
-  color: var(--color);
-  padding: var(--base);
-  text-align: center
+
+/* Page 2 */
+
+.rightside{ 
+  padding: var(--base) 0;
+  font-size: calc(var(--paragprah)/2)
+
+}
+
+.warpedtext{
+  display: none;
+}
+
+.Mainimage.two{
+  margin: 5vw 35vw; 
 }
 
 /* Page 3 */
 
-/* 3.1 */
-
-.bkg3{
-  background-color: black;
-  color:var(--color)
-  }
-
-  .Red { 
-    margin: 0 auto;
-    padding-top: calc(var(--base)*21);
+  .Red{ 
+    display: none;
+    visibility: none;
     }
-    
-    .Darkred {
-      margin: 0 auto;
+ 
+    .farup{ 
+      display: none;
+      visibility: none;
+      }
+
+    .lft.smaller { 
+      display: none;
+      visibility: none;
+    }
+
+    .Smallscreen {
+      padding: 0 calc(var(--base)*2);
       text-align: center;
-      font-size: var(--paragprah);
+      font-size: calc(var(--paragprah)/3)
     }
 
-.Overlay {
-  display: none;
-}
+    .Mainimage.three{
+      margin: 5vw 70vw; 
+    }
 
-/* 3.2 */
+    /* Page 4 */
 
-.Lft2 {
-  display: none;
-}
+    .farup2{
+       margin: 0 10vw;
+       margin-bottom: 0;
+      }
 
-.Red2{
-margin:auto;
-font-size: calc(var(--paragprah)/2);
-padding: auto
-}
+      .Mainimage.four { 
+        margin: 100vw 70vw;
+        margin-bottom: 0;
+      }
 
-.farup{ 
-  font-size: calc(var(--paragprah)*1.2);
-  text-align: center; 
-  margin: var(--base);
-  color:#3c0000; 
-}
+      .farup2{
+        display:none
+      }
 
-}
+      .middle {
+        visibility: visible;
+        position: absolute;
+        display: block;
+        font-size: calc(var(--paragprah)/2); 
+        margin: 20vw;
+        top: var(--base);
+        margin-top: 0;
+      }
 
-@media (width: 763px) {
-  /* Only for Page 4 */
+   
 
-.lines { 
-  position: absolute;
-  width: 19.8vw;
-  left: 67.55vw;
-  top: 79vw;
-  
-  border: 1.8px solid #3c0000; ;
-  transform: rotate(90deg);
-}
-
-.line2{
-  position: absolute;
-  width: 19.8vw;
-  left: 65.75vw;
-  top: 79vw;
-  
-  border: 1.8px solid #3c0000;
-  transform: rotate(90deg);
-}
 }
 
 
-@media (min-width:768px) {
+@media (min-width:768px) and (max-width: 1024px) {
 
   /* Tablet */
- 
+
   /* Page 2  */
 
-  /* 2.1 */
-
-  .Smallscreen {
-    display: none; 
+  .rightside {
+    color: var(--color); 
  }
+
+ .Mainimage.two {
+  display:block;
+  margin: auto
+ }
+
+ .warpedtext {
+  display: none;
+ }
+
+.rules{
+  display:none; 
+}
 
 /* Page 3 */
 
-/* 3.1 */
+  
+  .lft.smaller {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .Smallscreen {
+    padding: 0 calc(var(--base)*2);
+    text-align: center
+  }
 
- .bkg3{
-  background-color: black;
-  color:var(--color)
+  .Red{
+    display: none;
+    visibility: hidden;
   }
-  
-  .leftside.smaller {
-    margin-top: calc(var(--base)*6.5);
+
+  .Mainimage.three{
+    margin: 3vw 70vw; 
+    margin-bottom: 0
   }
-  
-  .Red { 
-  margin: 0 auto;
-  padding-top: calc(var(--base)*21);
-  }
-  
+
   .Darkred {
-    margin: auto;
-    text-align: center;
+    margin-bottom: 0;
   }
 
-  .Overlay {
-    color:#c00505;
-    opacity: 0.5;
-    margin:var(--base) 0;
-    margin-top: calc(var(--base)*4);
+  /* Page 4 */
+
+  /* .farup2{
+    display: none
+  } */
+
+  /* .middle { 
+    visibility: visible;
+    display: block;
+    position: absolute;
+    max-width: 60ch;
+    font-size: calc(var(--paragprah)/1.5); 
+    margin: 20vw;
+    top: var(--base);
+    transition: opacity 0.2s ease-in-out;
   }
 
-  /* 3.2 */
-
-  .farup{
-    font-size: calc(var(--paragprah)/1.2);
-    margin: 0 calc(var(--base)*5);
-    text-align: center;
-    color:#3c0000
-  }
-
+  .Mainimage.four { 
+    margin: 75vw 75vw;
+    margin-bottom: 0
+  } */
 
 }
 
+@media (hover: none) {
+
+  /* Disable hover */
+
+  .image-container:hover {
+    display: inherit;
+  }
+}
 
 
 
@@ -537,37 +620,17 @@ padding: auto
 
   /* Laptop or larger */
 
-   /* Page 2  */
-
-  /* 2.1 */
-
-  .Smallscreen {
-    display: none; 
- }
-
  /* Page 3 */
 
- /* 3.1 */
-.Overlay {
-  display: none;
+ .Smallscreen {
+  display: none; 
 }
 
 .Darkred{
   padding-bottom: 0;
 }
 
-/* 3.2 */
-
-.farup{ 
-  display: block;
-  margin-top: 0;
-  top:0;
-  display: block;
-  position: absolute;
-  max-width: 40ch;
- font-size: var(--paragprah); 
- margin-left: 20vw
-}
+/* Page 4 */
 
 }
 
