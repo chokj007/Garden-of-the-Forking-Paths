@@ -242,6 +242,12 @@ img{
   color:#c00505
 }
 
+#random-elements-container { 
+  color:red; 
+  font-size: calc(var(--paragprah)*1.5);
+  opacity: 0.3;
+}
+
 /* Media Queries */
 
 
