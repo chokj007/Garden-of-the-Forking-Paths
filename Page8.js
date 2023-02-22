@@ -6,7 +6,7 @@ const elements = [
   ];
   
   // Define the time interval to add the elements (in milliseconds)
-  const interval = 45000; // Add an element every 60 seconds
+  const interval = 50000; // Add an element every 50 seconds
   
   // Function to generate a random number between 0 and 1
   function generateRandomNumber() {
