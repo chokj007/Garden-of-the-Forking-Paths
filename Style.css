@@ -21,6 +21,12 @@ h2{
   font-size: var(--paragprah);
 }
 
+h3{
+  font-family: 'Nothing You Could Do', cursive;
+  opacity: 0.4;
+
+}
+
 p{
   font-family: 'Space Mono', monospace; 
   font-size: calc(var(--paragprah)/1.5);  
@@ -157,14 +163,14 @@ img{
 
 .Mainimage.six{
   position: absolute;
-  top: 90vw;
+  top: 40vw;
   left: 45vw; 
 }
 
 .Mainimage.seven{
   position: absolute;
-  top: 90vw;
-  left: 10vw; 
+  top: 40vw;
+  left: 5vw; 
 }
 
 .Page6{
@@ -224,8 +230,23 @@ img{
 }
 
 #random-elements-container { 
-  color:red; 
+  color:rgb(255, 255, 255); 
   font-size: calc(var(--paragprah)*1.5);
+  opacity: 0.5;
+  margin-left: calc(var(--base)*2);
+}
+
+.last { 
+margin: calc(var(--base)*1.5);
+position: absolute;
+}
+
+
+.Mainimage.eight{
+  position: absolute;
+  float: left;
+  bottom: 0;
+  margin-top: calc(var(--base)*7); 
   opacity: 0.3;
 }
 
