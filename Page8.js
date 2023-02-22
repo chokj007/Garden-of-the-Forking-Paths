@@ -2,6 +2,8 @@
 const elements = [
     '<p>For a moment I thought that Richard Madden might in some way have divined my desperate intent. At once I realizedthat this would be impossible. The advice about turning always to the left reminded me that such was the common formula for finding the central courtyard of certain labyrinths. I know something about labyrinths. Not for nothing am I the greatgrandson of Tsui Pen. He was Governor of Yunnan and gave up temporal power to write a novel with more characters than there are in the Hung Lou Meng, and to create a maze in which all men would lose themselves. He spent thirteen years on these oddly assorted tasks before he was assassinated by a stranger. His novel had no sense to it and nobody ever found his labyrinth. </p>',
     '<p>In ten minutes I had developed my plan. The telephone directory gave me the name of the one person capable of passing on the information. He lived in a suburb of Fenton, less than half an hour away by train.</p>    ',
+    '<h2>"The word is chess."</h2>'
+
   ];
   
   // Define the time interval to add the elements (in milliseconds)
